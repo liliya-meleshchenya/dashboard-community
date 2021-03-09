@@ -1,0 +1,116 @@
+.audience-reach {
+    display: flex;
+    flex-direction: column;
+    width: 768px;
+    height: 242px;
+    border-radius: 13px;
+    background-color: $color-white;
+    @include xl(){
+        width: 400px;
+    }
+}
+.audience-reach__header {
+    display: flex;
+    justify-content: space-between;
+    width: 768px;
+    padding: 27px 63px 0 24px;
+    @include xl(){
+        width: 380px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: center;
+    }
+}
+/* таблица */
+
+.audience-reach__main{
+    overflow: auto;
+    padding-bottom: 24px;
+}
+.audience-reach__schedule {
+    display: flex;
+    padding: 0 40px;
+    padding-top: 3%;
+}
+.audience-reach__schedule-body {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 637px;
+    width: 637px;
+    background: url(../img/schedules/curve.png) no-repeat center/contain;
+}
+.audience-reach__schedule-y {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.audience-reach__schedule-x {
+    display: flex;
+    justify-content: space-between;
+    width: 740px;
+    padding: 0 0 0 50px;
+}
+.audience-reach__schedule-cell {
+    float: left;
+    width: 91px;
+    height: 29px;
+    border: 1px solid #EFF3F9;
+}
+
+/* чекбокс */
+
+.audience-reach__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.audience-reach__input+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+  .audience-reach__input--violet+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1.5px solid $color-violet;
+    border-radius: 5px;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+  .audience-reach__input--pink+label::before{
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1.5px solid $color-pink;
+    border-radius: 5px;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+  .audience-reach__input:checked+label::before {
+    background-image: url(../img/input/check-mark.png);
+  }
+//   стилизация текста// 
+.audience-reach__data-text{
+    @include text-decoration (12px, 500, $color-grey);
+    @include xl(){
+        margin-right: 20px;
+    }
+}
+.audience-reach__input-text{
+    @include text-decoration (12px, 600, $color-black);
+
+}
+.audience-reach__text{
+    @include text-decoration (12px, 500, $color-grey);
+}

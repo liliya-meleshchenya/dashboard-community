@@ -1,0 +1,16 @@
+.nav-mobile {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;    
+    background: $color-grey;
+    position: fixed;
+    top: 90%;
+    height: 10%;
+    display: none;
+    width: 468px;
+    z-index: 1;
+    opacity: 0.5;
+    @include lg(){
+        display: flex;
+    }
+}
